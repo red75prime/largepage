@@ -141,15 +141,15 @@ fn main() {
     let mut rng = StdRng::new().expect("Cannot create rng");
 
 
-//    let mut a = arena.alloc::<[f64;N*N]>();
-//    let mut b = arena.alloc::<[f64;N]>();
-    let mut a = Vec::with_capacity(N*N);
-    let mut b = Vec::with_capacity(N);
-    unsafe {
-        // it's safe as long as uninitialized values aren't read
-        a.set_len(N*N);
-        b.set_len(N);
-    }
+    let mut a = arena.alloc::<[f64;N*N]>();
+    let mut b = arena.alloc::<[f64;N]>();
+//    let mut a = Vec::with_capacity(N*N);
+//    let mut b = Vec::with_capacity(N);
+//    unsafe {
+//        // it's safe as long as uninitialized values aren't read
+//        a.set_len(N*N);
+//        b.set_len(N);
+//    }
     
     for i in 0..N {
         for j in 0..N {
